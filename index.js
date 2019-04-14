@@ -7,11 +7,11 @@ bot.on("ready", async () => {
   bot.user.setPresence({
         game: { 
             name: 'BY FEB天上女孩ID',
-            type: 'STREAMING'
+            type: 'LISTENING'
         },
-        status: 'idle'
+        status: 'available'
     })
-  bot.setPresence({ game: { name: 'GameHere', type: 1 } });
+  bot.user.setPresence({ game: { name: 'GameHere', type: 1 } });
 });
 
 bot.on("message", async message => {
