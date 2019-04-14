@@ -4,7 +4,13 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
     bot.user.setActivity("New! SERVER QQ BOT")
-    bot.change_presence(game=discord.Game(name='with '+str(len(set(client.get_all_members())))+' users'))
+  bot.user.setPresence({
+        game: { 
+            name: 'my code',
+            type: 'WATCHING'
+        },
+        status: 'idle'
+    })
 });
 
 bot.on("message", async message => {
