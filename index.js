@@ -11,7 +11,7 @@ bot.on("ready", async () => {
         },
         status: 'available'
     })
-  bot.user.setPresence({ game: { name: 'GameHere', type: 1 } });
+  bot.user.setPresence({ game: { name: 'GameHere', type: 2 } });
 });
 
 bot.on("message", async message => {
