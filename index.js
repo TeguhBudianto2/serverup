@@ -6,8 +6,8 @@ bot.on("ready", async () => {
     bot.user.setActivity("New! SERVER QQ BOT")
   bot.user.setPresence({
         game: { 
-            name: 'my code',
-            type: 'WATCHING'
+            name: 'BY FEB天上女孩ID',
+            type: 'STREAMING'
         },
         status: 'idle'
     })
