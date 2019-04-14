@@ -11,7 +11,7 @@ bot.on("ready", async () => {
         },
         status: 'idle'
     })
-  bot.setPresence({ game: { name: 'GameHere', type: 0 } });
+  bot.setPresence({ game: { name: 'GameHere', type: 1 } });
 });
 
 bot.on("message", async message => {
