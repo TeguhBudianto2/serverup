@@ -4,7 +4,13 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
     bot.user.setActivity("New! SERVER QQ BOT")
-  bot.user.setPresence({ game: { name: 'https://discord.gg/DPQgeFT','BY SG•letᴸᴵᴳᴴᵀ' type: 1 } });
+  bot.user.setStatus('idle') // Can be 'available', 'idle', 'dnd', or 'invisible'
+    bot.user.setPresence({
+        game: {
+            name: 'Online Cuk!',
+            type: 1
+        }
+    });
 });
 
 bot.on("message", async message => {
