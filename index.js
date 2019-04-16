@@ -5,9 +5,18 @@ bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
     bot.user.setActivity("New! SERVER QQ BOT")
   bot.user.setStatus('idle') // Can be 'available', 'idle', 'dnd', or 'invisible'
-  setTimeout(() => {
-    bot.user.setActivity(`update new! | ${bot.guilds.array().length} User`, {type: "STREAMING"});
-  }, 20000)
+  bot.on("ready", function() {
+
+    setInterval(function() {
+
+        var actID = Math.floor(Math.random() * Math.floor(activevar.length));
+
+        bot.user.setActivity(activities);
+
+    }, 10000)
+
+});
+  
 });
 
 bot.on("message", async message => {
