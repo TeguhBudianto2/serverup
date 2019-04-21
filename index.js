@@ -6,7 +6,7 @@ let activityTypes = ['PLAYING','STREAMING','LISTENING','WATCHING']
 let randomType = activityTypes[Math.floor((Math.random()*activityTypes.length))]
 
 setInterval(async ()=>{
-    await client.user.setActivity('Your text here.', { type: randomType })
+    await bot.user.setActivity('Your text here.', { type: randomType })
 },10000)
 
 });
