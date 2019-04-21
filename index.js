@@ -13,14 +13,9 @@ bot.on('ready', () => {
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
         bot.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+        bot.user.setActivity('Your text here.', { type: randomType })
     }, 10000); // Runs this every 10 seconds.
 });
-
-let activityTypes = ['PLAYING','STREAMING','LISTENING','WATCHING']
-let randomType = activityTypes[Math.floor((Math.random()*activityTypes.length))]
-setInterval(async ()=>{
-    await bot.user.setActivity('Your text here.', { type: randomType })
-},10000)
 
 
 bot.on("message", async message => {
