@@ -1,17 +1,13 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
-let activity = ["`${client.users.size} commands | ><help`, {type: "LISTENING"}", "`on ${client.guilds.size} servers | ><help`, {type: "PLAYING"}
+let activity = ["`on ${client.guilds.size} servers | `, {type: "PLAYING"}
+let activityTypes = ['PLAYING','STREAMING','LISTENING','WATCHING']
+let randomType = activityTypes[Math.floor((Math.random()*activityTypes.length))]
 
-bot.on('ready', () => {
-
-    setInterval(() => {
-
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-
-        bot.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
-
-    }, 10000);
+setInterval(async ()=>{
+    await client.user.setActivity('Your text here.', { type: randomType })
+},10000)
 
 });
 
