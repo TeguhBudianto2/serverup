@@ -3,9 +3,9 @@ const bot = new Discord.Client({disableEveryone: true});
 
 const activities_list = [
     "with the &help command.", 
-    "with the developers console",
-    "with some code", 
-    "with JavaScript"
+    "By: FEBスカイラーID#4372",
+    "https://discord.gg/eA3Jrfa", 
+    "Update JavaScript"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 bot.on('ready', () => {
