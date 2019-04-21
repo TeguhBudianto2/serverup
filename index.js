@@ -3,6 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 const activities_list = [
     "with the &help command.", 
+    "ping fix developer",
     "By: FEBスカイラーID#4372",
     "https://discord.gg/eA3Jrfa", 
     "Update JavaScript"
