@@ -1,13 +1,29 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
-let activity = ["`on ${client.guilds.size} servers | `, {type: "PLAYING"}
-let activityTypes = ['PLAYING','STREAMING','LISTENING','WATCHING']
-let randomType = activityTypes[Math.floor((Math.random()*activityTypes.length))]
+const activities_list = [
 
-setInterval(async ()=>{
-    await bot.user.setActivity('Your text here.', { type: randomType })
-},10000)
+    "with Hi Bot Indonesia!", 
+
+    "ping fix developer",
+
+    "By: FEBスカイラーID#4372",
+
+    "https://discord.gg/eA3Jrfa", 
+
+    "Update JavaScript"
+
+    ]; // creates an arraylist containing phrases you want your bot to switch through.
+
+bot.on('ready', () => {
+
+    setInterval(() => {
+
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+
+        bot.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+
+    }, 10000); // Runs this every 10 seconds.
 
 });
 
