@@ -8,6 +8,7 @@ const activities_list = [
     "ping fix developer",
 
     "By: FEBスカイラーID#4372",
+    "bot.user.setActivity('YouTube', { type: 'STEAMING'});"
 
     "https://discord.gg/eA3Jrfa", 
 
